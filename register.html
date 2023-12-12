@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login">
+        <img src="imgs/loginBg.png" alt="" class="loginBg">
+        <a href="index.html" class="loginRoute main_color f-15 font-bolde ">
+            <i class="fa-solid fa-arrow-right rotateArrow"></i>
+            <span>  العودة الي الرئيسية </span>
+        </a>
+        <div class="position-relative p-sm-5 p-3  mt-md-5">
+
+            <div class="text-center">
+                <img src="imgs/logo.png" alt="" class="loginLogo mb-2">
+            </div>
+            <div class="title text-center">
+                <h6 class="mb-3 font-bolder"> تسجيل الدخول </h6>
+                <p class="text-muted">يمكنك متابعة الفروع واضافة فروع جديدة من هنا </p>
+            </div>
+
+            <form action="otp.html" class="lg" >
+                <div class="flex-center gap-10 mb-3">
+                    <label for="file"
+                        class="position-relative  img_gallery rounded_small flex-center">
+                        <div class="edit_icon_upBorder">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <input type="file" onchange="previewFile(this)" id="file" hidden="">
+                        <img id="imgPrev" src="" alt="imgPrev">
+                        <img src="imgs/cloud-storage.png" alt="userPic" class="cloudStorage">
+
+                    </label>
+                    <label for="file">
+                        <h6 >  شعار المستودع </h6>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-6 form-group">
+                        <label for="name"> اسم المستودع </label>
+                        <input type="text" class="form-control" id="name" placeholder="الرجاء ادخال اسم المستودع">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="phone"> رقم الجوال </label>
+                        <input type="number" id="phone" placeholder="الرجاء ادخال رقم الجوال" class="form-control">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="number2"> رقم السجل التجاري </label>
+                        <input type="number" class="form-control" id="number2"
+                            placeholder="الرجاء ادخال رقم السجل التجاري">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="number3"> الرقم الضريبي </label>
+                        <input type="number" class="form-control" id="number3"
+                            placeholder="الرجاء ادخال الرقم الضريبي ">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="mail"> البريد الالكتروني </label>
+                        <input type="mail" class="form-control" id="mail" placeholder="الرجاء ادخال البريد الالكتروني">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="name"> المدينة </label>
+                        <select class="select2 form-control form-input" name="country">
+                            <option value="AL"> نص </option>
+                            <option value="WY"> نص </option>
+                            <option value="WY"> نص </option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="bankName"> اسم البنك </label>
+                        <input type="text" class="form-control" id="bankName" placeholder="الرجاء ادخال  اسم البنك">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="number"> رقم الحساب البنكي </label>
+                        <input type="number" class="form-control" id="number"
+                            placeholder="الرجاء ادخال رقم الحساب البنكي ">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="password"> كلمة المرور </label>
+                        <input type="password" class="form-control password" id="password"
+                            placeholder="الرجاء ادخال كلمة المرور">
+                            <div class="input_icon eye " data-id="password">
+                                <i class="fa-regular  fa-eye"></i>
+                                </div>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="password2"> تأكيد كلمة المرور </label>
+                        <input type="password" class="form-control password" id="password2"
+                            placeholder="الرجاء ادخال  كلمة المرور ">
+                            <div class="input_icon input_icon eye " data-id="password2">
+                                <i class="fa-regular  fa-eye"></i>
+                                </div>
+                    </div>
+                </div>
+
+
+                <button class="btn main_btn w-50 form-group mx-auto ">
+                    تسجيل
+                </button>
+                <a href="login.html" class="form-group text-muted text-center d-block">
+                    <span> لديك حساب بالفعل ؟ </span> <span class="main_color">اضغط هنا </span>
+                </a>
+            </form>
+
+        </div>
+        <div class="containloginImg p-sm-5 p-3">
+            <img src="imgs/register.png" alt="" class="loginImg mdHeight mb-3">
+            <h5 class="main_color font-bolder">مرحبا بك في حمول تك </h5>
+            <p class="text-center">يمكنك تسجيل حساب جديد ف حمول تك </p>
+
+            <div class="flex-between align-self-stretch gap-10 flex-wrap" >
+                <a href="privacyPolicy.html" class="text-muted">
+                    <p class="mb-2">الموافقه علي جميع الشروط والاحكام </p>
+                    <p class="border-bottom-main"> الشروط والاحكام يمكنك مراجعتها قبل الموافقة </p>
+                </a>
+               
+                <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox" hidden checked>
+                    <div class="checkBoxShape"> 
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- ================ // end-page // ================ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+        });
+        // ///////////////////////////////////
+        $(document).ready(function () {
+            $('.select2').select2({
+                // placeholder: "Select a state",
+                "data-placeholder": "Please select an skill"
+            });
+        });
+        function previewFile(input) {
+            var preview = input.nextElementSibling
+            console.log(preview)
+            var file = input.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        }
+          // /////////////////////////////////////////////////////
+     let passwords = document.querySelectorAll(".password");
+        let eyes = document.querySelectorAll('.eye')
+        eyes.forEach(eye => {
+            eye.onclick = function () {
+                passwords.forEach(pass => {
+                    if (pass.value == '') {
+                        return
+                    } else {
+                        if (pass.id == eye.dataset.id) {
+                            let type = pass.getAttribute('type') === 'password' ? 'text' : 'password';
+                            pass.setAttribute("type", type);
+                            if (pass.getAttribute('type') === 'password' || pass.value == "") {
+                                eye.querySelector('.fa-regular').classList.add('fa-eye')
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye-slash')
+                            } else if (pass.getAttribute('type') === 'text') {
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye')
+                                eye.querySelector('.fa-regular').classList.add('fa-eye-slash')
+                            }
+                        }
+                    }
+
+
+                })
+            }
+
+        });
+    </script>
+</body>
+
+</html>

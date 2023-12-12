@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login">
+        <img src="imgs/loginBg.png" alt="" class="loginBg">
+        <a href="register.html" class="loginRoute main_color f-15 font-bolder">
+            <i class="fa-solid fa-arrow-right rotateArrow"></i>
+            <span>العودة</span>
+        </a>
+        <div class="position-relative p-sm-5 p-3">
+
+            <div class="text-center">
+                <img src="imgs/logo.png" alt="" class="logo lg mb-2">
+            </div>
+            <div class="title text-center">
+                <h5 class="mb-2"> الشروط والاحكام </h5>
+
+            </div>
+
+            <p class="text-justify text-muted"> هذا النص مثال لنص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص
+                ممكن ان يستبدل هذا النص مثال لنص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص
+                مثال لنص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص مثال لنص ممكن ان يستبدل
+                هذا النص ممكن ان يستبدل هذا النص ممكن ان يستبدل
+                هذا النص مثال لنص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص مثال لنص ممكن
+                ان يستبدل هذا النص ممكن ان يستبدل هذا النص ممكن ان يستبدل هذا النص مثال لنص ممكن ان يستبدل هذا النص ممكن
+                ان يستبدل هذا النص ممكن ان يستبدل
+            </p>
+            <label class="flex-between align-self-stretch  " for="checkbox">
+                <p class="text-muted border-bottom-main">
+                    الموافقه علي جميع الشروط والاحكام
+                </p>
+                <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox" hidden>
+                    <div class="checkBoxShape"> 
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </label>
+            </label>
+
+        </div>
+        <div class="containloginImg p-sm-5 p-3">
+            <img src="imgs/privacyPolicy.png" alt="" class="loginImg mdHeight mb-3">
+            <h5 class="main_color font-bolder">مرحبا بك في حمول تك </h5>
+            <p class="text-center"> الشروط والاحكام</p>
+        </div>
+    </div>
+    <!-- ================ // end-page // ================ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+        });
+        // ///////////////////////////////////
+        $(document).ready(function () {
+            $('.select2').select2({
+                // placeholder: "Select a state",
+                "data-placeholder": "Please select an skill"
+            });
+        });
+        function previewFile(input) {
+            var preview = input.nextElementSibling
+            console.log(preview)
+            var file = input.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

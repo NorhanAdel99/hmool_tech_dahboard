@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dataTables.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+<style>
+    .dataTables_length{
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="side_menu">
+        <img src="imgs/cross.png" alt="close" class="closeMenu">
+        <a href="index.html" class="d-block text-center">
+            <img src="imgs/logo.png" alt="logo" class="logo mx-auto mb-3">
+        </a>
+        <ul class="side_menu_ul active">
+            <li class="about_section  mb-3">
+                <a href="index.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/home.png" alt="home" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> الرئيسية </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="products.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/product.png" alt="products" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> منتجاتي </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="branches.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/branch.png" alt="branches" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> الفروع </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a class="flex-between " data-toggle="collapse" href="#collapseExample2" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/money.png" alt="Finance" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> طلباتي </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+
+            </li>
+            <div class="collapse " id="collapseExample2">
+                <a href="new_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/delivery-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/delivery-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات جديدة</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+                <a href="finished_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/return-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/return-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات منتهية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </div>
+            <li class="about_section  mb-2">
+                <a href="sales_reports.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/people.png" alt="userـpermissions" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تقارير المبيعات </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="userـpermissions.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/people.png" alt="userـpermissions" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> صلاحيات المستخدمين </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a class="flex-between " data-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/money.png" alt="Finance" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> المالية </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+
+            </li>
+            <div class="collapse" id="collapseExample">
+                <a href="financialـdues.html" class="sub_section">
+                    <div>
+                        <img src="imgs/delivery-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/delivery-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> المستحقات المالية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+                <a href="settlement_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/return-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/return-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات التسوية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                    <a>
+            </div>
+            <li class="about_section  mb-2">
+                <a href="settings.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/settings.png" alt="settings" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted">الاعدادات</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="contact_us.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/phone-call.png" alt="settings" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تواصل معنا </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="login.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon logOut">
+                            <img src="imgs/logout.png" alt="logOut" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تسجيل الخروج</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <header class="topper">
+            <div class="container">
+                <div class=" flex-between p-3 flex-wrap gap-10">
+                    <div class="d-flex gap-10 align-items-center flex-basis-40">
+                        <img src="imgs/menu.png" alt="" class="menuVisibilty rotateArrow">
+                        <form action="" class="contain_input_icon_without_label search grow-1">
+                            <input type="search" id="search" class="form-control" placeholder="كلمات مفتاحية">
+                            <label for="search" class="input_icon without_label">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </form>
+                        <i class="searchInput fa-solid fa-magnifying-glass main_color f-18" data-toggle="modal"
+                            data-target="#searchModal"></i>
+                    </div>
+                    <div class="d-flex gap-30 align-items-center">
+                        <div class="d-flex gap-10 align-items-center">
+                            <img src="imgs/user.jpg" alt="" class="usrImg">
+                            <div>
+                                <div class="font-bolder"> محمد احمد </div>
+                                <div> مدير النظام </div>
+                            </div>
+                        </div>
+                        <a href="notification.html" class="notification">
+                            <i class="fa-regular fa-bell f-17 main_color"></i>
+                            <div class="contain-num">3</div>
+                        </a>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle headerDropdown  position-relative" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <p class="ar">Ar</p>
+                                <img src="imgs/saudi-arabia.png" alt="" class="langImg m-end-5">
+                            </div>
+                            <div class="dropdown-menu  f-13 m-end-10">
+                                <a class="dropdown-item d-flex align-items-center justify-content-between position-relative"
+                                    href="#">
+                                    <p class="">AR</p>
+                                </a>
+
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <p class="">EN</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- body-content -->
+        <div class="body-content">
+            <div class="container">
+                <div class="s-space">
+                    <ul class="nav nav-tabs project_nav mb-3" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">طلبات تسوية جديدة
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false"> طلبات تسوية
+                                منتهية </button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="orderCard mb-3 shadow">
+                                <div class="grayBox">
+                                    <img src="imgs/logo.png" alt="" class="logo">
+                                </div>
+                                <div class="grow-1">
+                                    <div class="flex-between mb-3">
+                                        <h6 class="font-bolder">
+                                            <span> رقم الطلب : </span>
+                                            <span> #1234 </span>
+                                        </h6>
+                                        <div class="text-muted">
+                                            منذ 1 ساعة
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted">
+                                            قيمة الطلب :
+                                        </span>
+                                        <span>
+                                            2000 رس
+                                        </span>
+                                    </div>
+                                    <hr>
+                                    <div class="flex-between">
+                                        <div>
+                                            <i class="fa-solid fa-cart-flatbed-suitcase text-muted"></i>
+                                            <span class="text-muted">الحالة : </span>
+                                            <span class="text-warning">انتظار الموافقة </span>
+                                        </div>
+                                        <div class="aboutOrder cursor_poninter " data-id="#currentOrder_1">
+                                            <span> عرض المزيد </span>
+                                            <i class="fa-solid fa-chevron-left rotateArrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderCard mb-3 shadow">
+                                <div class="grayBox">
+                                    <img src="imgs/logo.png" alt="" class="logo">
+                                </div>
+                                <div class="grow-1">
+                                    <div class="flex-between mb-3">
+                                        <h6 class="font-bolder">
+                                            <span> رقم الطلب : </span>
+                                            <span> #1234 </span>
+                                        </h6>
+                                        <div class="text-muted">
+                                            منذ 1 ساعة
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted">
+                                            قيمة الطلب :
+                                        </span>
+                                        <span>
+                                            2000 رس
+                                        </span>
+                                    </div>
+                                    <hr>
+                                    <div class="flex-between">
+                                        <div>
+                                            <i class="fa-solid fa-cart-flatbed-suitcase text-muted"></i>
+                                            <span class="text-muted">الحالة : </span>
+                                            <span class="text-warning">انتظار الموافقة </span>
+                                        </div>
+                                        <div class="aboutOrder cursor_poninter " data-id="#currentOrder_2">
+                                            <span> عرض المزيد </span>
+                                            <i class="fa-solid fa-chevron-left rotateArrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currentOrderDetails d-none" id="currentOrder_1">
+                                <div class="backToOrders f-15 main_color">
+                                    <i class="fa-solid fa-arrow-right rotateArrow"></i>
+                                </div>
+                                <div class="row justify-content-center gap-20 align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="shadow rad-6  mb-5">
+                                            <div class="p-3">
+                                                <img src="imgs/logo.png" class="logo lg d-block mx-auto mb-3 " alt="">
+
+                                                <div class="flex-between flex-wrap gap-20 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي الطلبات
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 100,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي العمولة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50.00</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي القيمة المضافة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+
+                                            <hr class="p-0 m-0">
+                                            <div class="p-3">
+                                                <h6>
+                                                    <span class="font-bolder">
+                                                        المستحق لك :
+                                                    </span>
+                                                    <span class="main_color">
+                                                        900
+                                                    </span>
+                                                    <span class="main_color"> ر.س </span>
+                                                </h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="imgs/wallet.png" class="wallet mb-3" alt="">
+                                    </div>
+                                </div>
+                                <table id="table" class="project_table display responsive nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th> رقم </th>
+                                            <th> رقم الطلب </th>
+                                            <th> قيمة المشتريات </th>
+                                            <th> العمولة </th>
+                                            <th> القيمة المضافة </th>
+                                            <th> الاجمالي </th>
+                                            <th> التاريخ </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="NewPaginationContainer pt-0 px-4 pb-4 ">
+
+                                </div>
+
+
+                            </div>
+                            <div class="currentOrderDetails d-none" id="currentOrder_2">
+                                <div class="backToOrders f-15 main_color">
+                                    <i class="fa-solid fa-arrow-right rotateArrow"></i>
+                                </div>
+                                <div class="row justify-content-center gap-20 align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="shadow rad-6  mb-5">
+                                            <div class="p-3">
+                                                <img src="imgs/logo.png" class="logo lg d-block mx-auto mb-3 " alt="">
+
+                                                <div class="flex-between flex-wrap gap-20 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي الطلبات
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 100,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي العمولة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50.00</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي القيمة المضافة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+
+                                            <hr class="p-0 m-0">
+                                            <div class="p-3">
+                                                <h6>
+                                                    <span class="font-bolder">
+                                                        المستحق لك :
+                                                    </span>
+                                                    <span class="main_color">
+                                                        900
+                                                    </span>
+                                                    <span class="main_color"> ر.س </span>
+                                                </h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="imgs/wallet.png" class="wallet mb-3" alt="">
+                                    </div>
+                                </div>
+                                <table id="table" class="project_table display responsive nowrap table2">
+                                    <thead>
+                                        <tr>
+                                            <th> رقم </th>
+                                            <th> رقم الطلب </th>
+                                            <th> قيمة المشتريات </th>
+                                            <th> العمولة </th>
+                                            <th> القيمة المضافة </th>
+                                            <th> الاجمالي </th>
+                                            <th> التاريخ </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="NewPaginationContainer pt-0 px-4 pb-4 ">
+
+                                </div>
+
+
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="orderCard mb-3 shadow">
+                                <div class="grayBox">
+                                    <img src="imgs/logo.png" alt="" class="logo">
+                                </div>
+                                <div class="grow-1">
+                                    <div class="flex-between mb-3">
+                                        <h6 class="font-bolder">
+                                            <span> رقم الطلب : </span>
+                                            <span> #1234 </span>
+                                        </h6>
+                                        <div class="text-muted">
+                                            منذ 1 ساعة
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted">
+                                            قيمة الطلب :
+                                        </span>
+                                        <span>
+                                            2000 رس
+                                        </span>
+                                    </div>
+                                    <hr>
+                                    <div class="flex-between">
+                                        <div>
+                                            <i class="fa-solid fa-cart-flatbed-suitcase text-muted"></i>
+                                            <span class="text-muted">الحالة : </span>
+                                            <span class="text-muted"> منتهي </span>
+                                        </div>
+                                        <div class="aboutOrder cursor_poninter " data-id="#currentOrder_3">
+                                            <span> عرض المزيد </span>
+                                            <i class="fa-solid fa-chevron-left rotateArrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderCard mb-3 shadow">
+                                <div class="grayBox">
+                                    <img src="imgs/logo.png" alt="" class="logo">
+                                </div>
+                                <div class="grow-1">
+                                    <div class="flex-between mb-3">
+                                        <h6 class="font-bolder">
+                                            <span> رقم الطلب : </span>
+                                            <span> #1234 </span>
+                                        </h6>
+                                        <div class="text-muted">
+                                            منذ 1 ساعة
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted">
+                                            قيمة الطلب :
+                                        </span>
+                                        <span>
+                                            2000 رس
+                                        </span>
+                                    </div>
+                                    <hr>
+                                    <div class="flex-between">
+                                        <div>
+                                            <i class="fa-solid fa-cart-flatbed-suitcase text-muted"></i>
+                                            <span class="text-muted">الحالة : </span>
+                                            <span class="text-muted"> منتهي </span>
+                                        </div>
+                                        <div class="aboutOrder cursor_poninter " data-id="#currentOrder_4">
+                                            <span> عرض المزيد </span>
+                                            <i class="fa-solid fa-chevron-left rotateArrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currentOrderDetails d-none" id="currentOrder_3">
+                                <div class="backToOrders f-15 main_color">
+                                    <i class="fa-solid fa-arrow-right rotateArrow"></i>
+                                </div>
+                                <div class="row justify-content-center gap-20 align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="shadow rad-6  mb-5">
+                                            <div class="p-3">
+                                                <img src="imgs/logo.png" class="logo lg d-block mx-auto mb-3 " alt="">
+
+                                                <div class="flex-between flex-wrap gap-20 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي الطلبات
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 100,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي العمولة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50.00</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي القيمة المضافة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+
+                                            <hr class="p-0 m-0">
+                                            <div class="p-3">
+                                                <h6>
+                                                    <span class="font-bolder">
+                                                        المستحق لك :
+                                                    </span>
+                                                    <span class="main_color">
+                                                        900
+                                                    </span>
+                                                    <span class="main_color"> ر.س </span>
+                                                </h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="imgs/wallet.png" class="wallet mb-3" alt="">
+                                    </div>
+                                </div>
+                                <table id="table" class="project_table display responsive nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th> رقم </th>
+                                            <th> رقم الطلب </th>
+                                            <th> قيمة المشتريات </th>
+                                            <th> العمولة </th>
+                                            <th> القيمة المضافة </th>
+                                            <th> الاجمالي </th>
+                                            <th> التاريخ </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="NewPaginationContainer pt-0 px-4 pb-4 ">
+
+                                </div>
+
+
+                            </div>
+                            <div class="currentOrderDetails d-none" id="currentOrder_4">
+                                <div class="backToOrders f-15 main_color">
+                                    <i class="fa-solid fa-arrow-right rotateArrow"></i>
+                                </div>
+                                <div class="row justify-content-center gap-20 align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="shadow rad-6  mb-5">
+                                            <div class="p-3">
+                                                <img src="imgs/logo.png" class="logo lg d-block mx-auto mb-3 " alt="">
+
+                                                <div class="flex-between flex-wrap gap-20 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي الطلبات
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 100,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي العمولة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50.00</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="flex-between flex-wrap gap-10 mb-3">
+                                                    <h6 class="space_gray">
+                                                        اجمالي القيمة المضافة
+                                                    </h6>
+                                                    <h6 class="font-bolder">
+                                                        <span> 50,000</span>
+                                                        <span>ر.س </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+
+                                            <hr class="p-0 m-0">
+                                            <div class="p-3">
+                                                <h6>
+                                                    <span class="font-bolder">
+                                                        المستحق لك :
+                                                    </span>
+                                                    <span class="main_color">
+                                                        900
+                                                    </span>
+                                                    <span class="main_color"> ر.س </span>
+                                                </h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="imgs/wallet.png" class="wallet mb-3" alt="">
+                                    </div>
+                                </div>
+                                <table id="table" class="project_table display responsive nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th> رقم </th>
+                                            <th> رقم الطلب </th>
+                                            <th> قيمة المشتريات </th>
+                                            <th> العمولة </th>
+                                            <th> القيمة المضافة </th>
+                                            <th> الاجمالي </th>
+                                            <th> التاريخ </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <td> 1 </td>
+                                            <td> 123456 </td>
+                                            <td>
+                                                <span>1000.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>
+                                                <span>10.00</span>
+                                                <span> ر.س </span>
+                                            </td>
+                                            <td>3 مارس 2023 </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div class=" dropdown-toggle afterNone" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </div>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item f-10" href="#">
+                                                            <span> التفاصيل</span>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="NewPaginationContainer pt-0 px-4 pb-4 ">
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- ================ // modal // ================ -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form action="" class="contain_input_icon_without_label grow-1 ">
+                        <div class="form-group">
+                            <input type="search" id="search" class="form-control" placeholder="كلمات مفتاحية">
+                            <label for="search" class="input_icon without_label">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn main_btn m-auto"> ابحث </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ================ // loader // ================ -->
+    <div class="loader">
+        <img src="imgs/logo.png" alt="" class="logoWhite wow  animate__animated animate__jackInTheBox">
+    </div>
+    <!-- ================ // end-page // ================ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/dataTables.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        let allLinks = document.querySelectorAll(".side_menu_ul  a ");
+
+        allLinks.forEach((link) => {
+            if (link.href == location.href) {
+                link.parentElement.classList.add('active')
+                link.classList.add('active')
+
+            } else if (link.href !== location.href) {
+                link.parentElement.classList.remove('active');
+                link.classList.remove('active')
+
+            }
+        })
+    </script>
+    <script>
+
+
+        $(document).ready(function () {
+            $('table').DataTable({
+                responsive: true,
+                scrollCollapse: true,
+                searching: true,
+                bFilter: true,
+                bInfo: true,
+                "bFilter": true,
+                "paging": true,
+                columnDefs: [
+                    { responsivePriority: 2, targets: -1 }
+                ],
+                "language":
+                {
+
+                    "sProcessing": "جارٍ التحميل...",
+                    "sLengthMenu": "أظهر _MENU_ مدخلات",
+                    "sZeroRecords": "لم يعثر على أية سجلات",
+                    "sInfo": " إظهار النتائج من  _START_ - _END_ ",
+                    "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+                    "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                    "sInfoPostFix": "",
+                    "sSearch": "ابحث:",
+                    "sUrl": "",
+                    "oPaginate": {
+                        "sFirst": 'الاول',
+                        "sNext": '<i class="fa-solid fa-angles-left light-color rotateArrow"></i>',
+                        "sPrevious": '<i class="fa-solid fa-angles-right light-color rotateArrow"></i>',
+                        "sLast": "الأخير"
+                    }
+                },
+
+            });
+            $("table").each(function () {
+                let info = $(this).next()
+                let paginate = info.next()
+                console.log(paginate)
+                let NewPaginationContainer = $(this).parent().next();
+                NewPaginationContainer.append(info)
+                NewPaginationContainer.append(paginate)
+            });
+        })
+
+
+    </script>
+    <script>
+        document.querySelector('.menuVisibilty').onclick = function () {
+            document.querySelector('.side_menu').classList.add('active')
+            document.querySelector('.closeMenu').classList.add('active')
+        }
+        document.querySelector('.closeMenu').onclick = function () {
+            document.querySelector('.side_menu').classList.remove('active')
+            document.querySelector('.closeMenu').classList.remove('active')
+        }
+        document.querySelectorAll('.sub_section').forEach((el) => {
+            if (el.classList.contains('active')) {
+                el.parentElement.previousElementSibling.classList.add('active', 'show')
+                el.parentElement.classList.add('active', 'show')
+
+            }
+        })
+    </script>
+    <script>
+        document.querySelectorAll('.aboutOrder').forEach(element => {
+            element.onclick = function (e) {
+
+                document.querySelector(e.currentTarget.dataset.id).classList.add('d-block')
+                document.querySelector(e.currentTarget.dataset.id).classList.remove('d-none')
+
+                document.querySelectorAll('.tab-pane.active .orderCard').forEach((el) => {
+                    el.classList.add('d-none')
+                })
+
+            }
+        });
+        document.querySelectorAll('.backToOrders').forEach(element => {
+            element.onclick = function () {
+                element.parentElement.classList.add('d-none')
+                element.parentElement.classList.remove('d-block')
+
+                document.querySelectorAll('.tab-pane.active .orderCard').forEach((el) => {
+                    el.classList.remove('d-none')
+                })
+            }
+        })
+
+    </script>
+    <script>
+
+        $(".nav-link").not("#show_all").on("click", function () {
+
+            document.querySelectorAll('.tab-pane.active .orderCard').forEach((el) => {
+                el.classList.remove('d-none')
+            })
+
+            document.querySelectorAll('.currentOrderDetails').forEach((el) => {
+                el.classList.add('d-none')
+                el.classList.remove('d-block')
+
+            })
+            $(".tab-pane").not(this.hash).removeClass("active").removeClass("show");
+        });
+    </script>
+</body>
+
+</html>

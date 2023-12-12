@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dataTables.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="side_menu">
+        <img src="imgs/cross.png" alt="close" class="closeMenu">
+        <a href="index.html" class="d-block text-center">
+            <img src="imgs/logo.png" alt="logo" class="logo mx-auto mb-3">
+        </a>
+        <ul class="side_menu_ul active">
+            <li class="about_section  mb-3">
+                <a href="index.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/home.png" alt="home" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> الرئيسية </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="products.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/product.png" alt="products" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> منتجاتي </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="branches.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/branch.png" alt="branches" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> الفروع </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a class="flex-between " data-toggle="collapse" href="#collapseExample2" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/money.png" alt="Finance" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> طلباتي </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+
+            </li>
+            <div class="collapse " id="collapseExample2">
+                <a href="new_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/delivery-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/delivery-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات جديدة</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+                <a href="finished_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/return-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/return-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات منتهية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </div>
+            <li class="about_section  mb-2">
+                <a href="sales_reports.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/people.png" alt="userـpermissions" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تقارير المبيعات </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="userـpermissions.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/people.png" alt="userـpermissions" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> صلاحيات المستخدمين </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a class="flex-between " data-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/money.png" alt="Finance" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> المالية </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+
+            </li>
+            <div class="collapse" id="collapseExample">
+                <a href="financialـdues.html" class="sub_section">
+                    <div>
+                        <img src="imgs/delivery-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/delivery-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> المستحقات المالية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+                <a href="settlement_requests.html" class="sub_section">
+                    <div>
+                        <img src="imgs/return-box.png" alt="" class="sub_section_img">
+                        <img src="imgs/return-box-m.png" alt="" class="sub_section_img">
+
+                        <span class="text-muted m-start-10"> طلبات التسوية</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                    <a>
+            </div>
+            <li class="about_section  mb-2">
+                <a href="settings.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/settings.png" alt="settings" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted">الاعدادات</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="contact_us.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon">
+                            <img src="imgs/phone-call.png" alt="settings" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تواصل معنا </span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+            <li class="about_section  mb-2">
+                <a href="login.html" class="flex-between">
+                    <div class="d-flex align-items-center">
+                        <div class="contain_menu_icon logOut">
+                            <img src="imgs/logout.png" alt="logOut" class="side_menu_icon">
+                        </div>
+                        <span class="m-start-10 text-muted"> تسجيل الخروج</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-muted rotateArrow"></i>
+                </a>
+            </li>
+</ul>
+    </div>
+    <div class="main">
+        <header class="topper">
+            <div class="container">
+                <div class=" flex-between p-3 flex-wrap gap-10">
+                    <div class="d-flex gap-10 align-items-center flex-basis-40">
+                        <img src="imgs/menu.png" alt="" class="menuVisibilty rotateArrow">
+                        <form action="" class="contain_input_icon_without_label search grow-1">
+                            <input type="search" id="search" class="form-control" placeholder="كلمات مفتاحية">
+                            <label for="search" class="input_icon without_label">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </form>
+                        <i class="searchInput fa-solid fa-magnifying-glass main_color f-18" data-toggle="modal"
+                            data-target="#searchModal"></i>
+                    </div>
+                    <div class="d-flex gap-30 align-items-center">
+                        <div class="d-flex gap-10 align-items-center">
+                            <img src="imgs/user.jpg" alt="" class="usrImg">
+                            <div>
+                                <div class="font-bolder"> محمد احمد </div>
+                                <div> مدير النظام </div>
+                            </div>
+                        </div>
+                        <a href="notification.html" class="notification">
+                            <i class="fa-regular fa-bell f-17 main_color"></i>
+                            <div class="contain-num">3</div>
+                        </a>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle headerDropdown  position-relative" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <p class="ar">Ar</p>
+                                <img src="imgs/saudi-arabia.png" alt="" class="langImg m-end-5">
+                            </div>
+                            <div class="dropdown-menu  f-13 m-end-10">
+                                <a class="dropdown-item d-flex align-items-center justify-content-between position-relative"
+                                    href="#">
+                                    <p class="">AR</p>
+                                </a>
+
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <p class="">EN</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- body-content -->
+        <div class="body-content">
+            <div class="container">
+                <div class="s_space">
+                    <div class="title mb-3 border-bottom pb-3 ">
+                        <h5 class="font-bolder f-19 mb-3"> تعديل مستخدم </h5>
+                        <nav aria-label="breadcrumb" class="mb-3">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item "><a href="userـpermissions.html" class="text-muted"> صلاحيات
+                                        المستخدمين </a>
+                                </li>
+                                <li class="breadcrumb-item active main_color" aria-current="page"> تعديل مستخدم
+                                </li>
+                            </ol>
+                        </nav>
+                        <h6> تعديل بيانات المستخدم </h6>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form action="features.html">
+
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="name">
+                                            <span> اسم المستخدم بالعربية</span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" id="name" class="form-control"
+                                            placeholder="الرجاء ادخال اسم المستخدم بالغة العربية">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="nameEn">
+                                            <span> اسم المستخدم بالانجليزية</span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" id="nameEn" class="form-control"
+                                            placeholder="الرجاء ادخال اسم المستخدم بالغة العربية">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="nameAr2">
+                                            <span> الوظيفة بالعربية</span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" id="nameAr2" class="form-control"
+                                            placeholder="الرجاء ادخال اسم الوظبفة بالغة العربية">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="nameEn">
+                                            <span> الوظيفة بالانجليزية</span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" id="nameEn" class="form-control"
+                                            placeholder="الرجاء ادخال اسم الوظيفة بالغة الانجليزية">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label>
+                                            <span> الفرع الخاص بالمستخدم</span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="js-example-placeholder-single js-states form-control">
+                                            <option> الفرع </option>
+                                            <option> الفرع</option>
+                                            <option> الفرع </option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="mail">
+                                            <span> البريد الالكتروني </span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="email" id="mail" class="form-control"
+                                            placeholder=" الرجاء ادخال البريد الالكتروني ">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="phone">
+                                            <span> رقم جوال المستخدم </span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="number" class="form-control" id="phone"
+                                            placeholder=" الرجاء ادخال رقم جوال المستخدم  ">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="password"> 
+                                            <span>كلمة المرور </span>
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="password" class="form-control password" id="password"
+                                            placeholder="الرجاء ادخال كلمة المرور">
+                                        <div class="input_icon eye " data-id="password">
+                                            <i class="fa-regular  fa-eye"></i>
+                                        </div>
+                                    </div>
+                                    <label class="form-group d-block w-100">
+                                        <span> صلاحيات المستخدم</span>
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="d-flex align-items-center gap-30 flex-wrap mb-3">
+
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox">
+                                            <input type="checkbox" class="checkbox" id="checkbox" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> الاطلاع علي وتسليم الطلبات الوارده</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox2">
+                                            <input type="checkbox" class="checkbox" id="checkbox2" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox3">
+                                            <input type="checkbox" class="checkbox" id="checkbox3" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox4">
+                                            <input type="checkbox" class="checkbox" id="checkbox4" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox5">
+                                            <input type="checkbox" class="checkbox" id="checkbox5" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox6">
+                                            <input type="checkbox" class="checkbox" id="checkbox6" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+                                        <label class="d-flex gap-5 align-items-center form-group mb-0" for="checkbox7">
+                                            <input type="checkbox" class="checkbox" id="checkbox7" hidden>
+                                            <div class="checkBoxShape space_gray">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class='text-muted'> استقبال طلبات جديدة</p>
+                                        </label>
+
+                                    </div>
+
+
+                                </div>
+
+                                <button class="btn main_btn" data-toggle="modal" data-target="#addProductDone"
+                                    type="button"> تعديل مستخدم </button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ================ // modal // ================ -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form action="" class="contain_input_icon_without_label grow-1 ">
+                        <div class="form-group">
+                            <input type="search" id="search" class="form-control" placeholder="كلمات مفتاحية">
+                            <label for="search" class="input_icon without_label">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn main_btn m-auto"> ابحث </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ================ // modal // ================ -->
+    <div class="modal fade" id="addProductDone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <i class="fa-regular fa-circle-check f-40 main_color check "></i>
+                    <h5 class="text-center mb-2">
+                        تهانينا ! تم تعديل المستخدم بنجاح
+                    </h5>
+                    <a href="user_details.html" class="btn main_btn w-75 m-auto"> تأكيد </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ================ // loader // ================ -->
+    <div class="loader">
+        <img src="imgs/logo.png" alt="" class="logoWhite wow  animate__animated animate__jackInTheBox">
+    </div>
+    <!-- ================ // end-page // ================ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/dataTables.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+
+    <script>
+        document.querySelector('.menuVisibilty').onclick = function () {
+            document.querySelector('.side_menu').classList.add('active')
+            document.querySelector('.closeMenu').classList.add('active')
+        }
+        document.querySelector('.closeMenu').onclick = function () {
+            document.querySelector('.side_menu').classList.remove('active')
+            document.querySelector('.closeMenu').classList.remove('active')
+        }
+        document.querySelectorAll('.sub_section').forEach((el) => {
+            if (el.classList.contains('active')) {
+                el.parentElement.previousElementSibling.classList.add('active', 'show')
+                el.parentElement.classList.add('active', 'show')
+
+            }
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+        })
+
+        let passwords = document.querySelectorAll(".password");
+        let eyes = document.querySelectorAll('.eye')
+        eyes.forEach(eye => {
+            eye.onclick = function () {
+                passwords.forEach(pass => {
+                    if (pass.value == '') {
+                        return
+                    } else {
+                        if (pass.id == eye.dataset.id) {
+                            let type = pass.getAttribute('type') === 'password' ? 'text' : 'password';
+                            pass.setAttribute("type", type);
+                            if (pass.getAttribute('type') === 'password' || pass.value == "") {
+                                eye.querySelector('.fa-regular').classList.add('fa-eye')
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye-slash')
+                            } else if (pass.getAttribute('type') === 'text') {
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye')
+                                eye.querySelector('.fa-regular').classList.add('fa-eye-slash')
+                            }
+                        }
+                    }
+
+
+                })
+            }
+
+        });
+    </script>
+</body>
+
+</html>
